@@ -4,9 +4,6 @@ class MessageFilter
   end
 
   def detect?(text)
-    @words.each do |word|
-      return true if text.include?(word)
-    end
-    return false
+    @words.any? { |w| text.include?(w) }
   end
 end
