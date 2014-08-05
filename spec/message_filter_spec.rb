@@ -12,14 +12,14 @@ describe MessageFilter do
   context 'with argument "foo"' do
     subject { MessageFilter.new('foo') }
     it_behaves_like 'MessageFilter with argument "foo"'
-    its(:ng_words) { is_expected.to have(1).item }
+    it { is_expected.to have(1).ng_words }
   end
 
   context 'with argument "foo", "bar"' do
     subject { MessageFilter.new('foo', 'bar') }
     it { is_expected.to be_detect('hello from bar') }
     it_behaves_like 'MessageFilter with argument "foo"'
-    its(:ng_words) { is_expected.to have(2).items }
+    it { is_expected.to have(2).ng_words }
   end
 end
 
