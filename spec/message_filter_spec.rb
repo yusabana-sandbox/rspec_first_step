@@ -1,4 +1,4 @@
-require_relative '../lib/message_filter'
+require 'spec_helper'
 require 'rspec/its'
 require 'rspec/collection_matchers'
 
