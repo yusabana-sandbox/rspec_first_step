@@ -20,6 +20,8 @@ describe MessageFilter do
     it { is_expected.to be_detect('hello from bar') }
     it_behaves_like 'MessageFilter with argument "foo"'
     it { is_expected.to have(2).ng_words }
+
+    it { expect(subject).to have(2).ng_words } # subjectのゲッターを使った書き方
   end
 end
 
